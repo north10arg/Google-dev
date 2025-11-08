@@ -48,7 +48,11 @@ const QuickSummary = () => {
       {summary && (
         <div className="summary-result pt-4 border-t border-border">
           <h4 className="font-semibold mb-2">Seu Resumo:</h4>
-          <pre className="text-sm bg-slate-50 p-4 rounded-lg whitespace-pre-wrap font-sans">{summary}</pre>
+          <div className="text-sm bg-slate-50 p-4 rounded-lg space-y-2">
+            {summary.split('\n').filter(line => line.trim() !== '').map((line, index) => (
+                <p key={index} className="whitespace-pre-wrap">{line}</p>
+            ))}
+          </div>
         </div>
       )}
     </div>

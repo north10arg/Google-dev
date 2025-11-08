@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, FC } from 'react';
 import { Task } from '../types';
 
 interface AppContextType {
@@ -15,12 +15,12 @@ interface AppContextType {
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
-// FIX: Extracted props to a type alias for clarity and to prevent potential type inference issues.
 type AppProviderProps = {
   children: ReactNode;
 };
 
-export const AppProvider = ({ children }: AppProviderProps) => {
+// FIX: Explicitly type AppProvider as a React.FC to resolve a subtle type inference issue.
+export const AppProvider: FC<AppProviderProps> = ({ children }) => {
   const [user, setUser] = useState<{ name: string } | null>(null);
   const [tasks, setTasks] = useState<Task[]>([]);
   const [coins, setCoins] = useState(0);

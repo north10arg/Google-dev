@@ -69,8 +69,7 @@ export const usePomodoro = (onSessionComplete: (durationMinutes: number) => void
       }
       skipToNextMode();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [timeRemaining, mode, onSessionComplete, onCycleComplete]);
+  }, [timeRemaining, mode, onSessionComplete, onCycleComplete, skipToNextMode]);
 
   return {
     mode,

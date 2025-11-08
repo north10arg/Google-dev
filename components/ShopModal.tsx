@@ -40,7 +40,13 @@ const ShopModal = ({ onClose }: ShopModalProps) => {
             >
                 <div className="p-6 border-b border-border flex justify-between items-center">
                     <h2 className="text-2xl font-bold text-text-primary">Loja de Recompensas</h2>
-                    <button onClick={onClose} className="text-text-secondary hover:text-text-primary">&times;</button>
+                    <button 
+                        onClick={onClose} 
+                        className="text-text-secondary hover:text-text-primary text-3xl font-bold leading-none p-1 -mr-2"
+                        aria-label="Fechar loja"
+                    >
+                        &times;
+                    </button>
                 </div>
                 <div className="p-6 overflow-y-auto">
                     <div className="flex justify-between items-center bg-amber-100 p-4 rounded-lg mb-6">
