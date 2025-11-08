@@ -1,0 +1,5 @@
+{
+  "name": "FocaList",
+  "description": "A Progressive Web App designed to help students build consistent study habits through gamification, a Pomodoro timer, and a fun, engaging interface. Includes a quick summary tool powered by Gemini.",
+  "requestFramePermissions": []
+}
